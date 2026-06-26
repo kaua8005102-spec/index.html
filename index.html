@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palestra Contra as Drogas – EE Emília Cabral Mota</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #1a1a2e;
+  }
+
+  /* BACKGROUND with uploaded image */
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image: url('data:image/jpeg;base64,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');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: brightness(0.22) saturate(1.4);
+  }
+
+  .bg-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(ellipse at center, rgba(26,26,46,0.55) 0%, rgba(10,10,20,0.85) 100%);
+  }
+
+  .speed-lines {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background: repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      #ffd700 0deg 1.5deg,
+      transparent 1.5deg 6deg,
+      #ff6600 6deg 7deg,
+      transparent 7deg 12deg
+    );
+    opacity: 0.06;
+    animation: rotateLine 25s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes rotateLine {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .halftone {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background-image: radial-gradient(circle, rgba(255,215,0,0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none;
+  }
+
+  /* CONTENT */
+  .content {
+    position: relative;
+    z-index: 10;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  /* HEADER */
+  .header-banner {
+    background: linear-gradient(135deg, #ff6600 0%, #ffd700 50%, #ff6600 100%);
+    background-size: 200% 200%;
+    animation: shineGold 3s ease infinite;
+    border-radius: 0 0 24px 24px;
+    padding: 32px 28px 22px;
+    text-align: center;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 40px rgba(255,215,0,0.5), 0 0 0 3px #ffd700;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes shineGold {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .header-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -60%;
+    width: 35%; height: 200%;
+    background: rgba(255,255,255,0.28);
+    transform: skewX(-20deg);
+    animation: sweep 4s ease-in-out infinite;
+  }
+
+  @keyframes sweep {
+    0% { left: -60%; }
+    100% { left: 160%; }
+  }
+
+  .school-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #4a2000;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .header-title {
+    font-family: 'Bangers', cursive;
+    font-size: 42px;
+    color: #1a1a2e;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-shadow: 3px 3px 0 rgba(255,255,255,0.35);
+  }
+
+  .header-date {
+    font-size: 14px;
+    color: #4a2000;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* TICKER */
+  .ticker-wrap {
+    overflow: hidden;
+    background: #ff6600;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-bottom: 24px;
+  }
+
+  .ticker {
+    display: flex;
+    gap: 60px;
+    white-space: nowrap;
+    animation: tickerMove 22s linear infinite;
+  }
+
+  @keyframes tickerMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .ticker span {
+    font-family: 'Bangers', cursive;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: #1a1a2e;
+  }
+
+  .ticker span::before { content: '★  '; }
+
+  /* SPEECH BUBBLE */
+  .speech-bubble {
+    background: rgba(255,255,255,0.95);
+    color: #1a1a2e;
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin: 0 0 24px;
+    position: relative;
+    border: 3px solid #1a1a2e;
+    box-shadow: 5px 5px 0 #ffd700;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  }
+
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: 32px; top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: #1a1a2e;
+  }
+
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    left: 35px; top: -13px;
+    border: 8px solid transparent;
+    border-bottom-color: rgba(255,255,255,0.95);
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .speech-bubble p { font-size: 15px; line-height: 1.65; color: #1a1a2e; }
+
+  /* MANGA DIVIDER */
+  .manga-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 16px;
+  }
+
+  .manga-divider::before,
+  .manga-divider::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+  }
+
+  .manga-divider span {
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    color: #ffd700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  /* SECTION HEADING */
+  .section-heading {
+    font-family: 'Bangers', cursive;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .icon-circle {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    border: 2px solid currentColor;
+  }
+
+  /* DANGER CARDS */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .danger-card {
+    background: rgba(20,20,40,0.75);
+    backdrop-filter: blur(6px);
+    border: 2px solid;
+    border-radius: 14px;
+    padding: 18px 16px;
+    animation: slideUp 0.6s ease both;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .danger-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: currentColor;
+  }
+
+  .danger-card:nth-child(1) { border-color: #ff4444; color: #ff8888; animation-delay: 0.1s; }
+  .danger-card:nth-child(2) { border-color: #ff9900; color: #ffbb44; animation-delay: 0.2s; }
+  .danger-card:nth-child(3) { border-color: #aa44ff; color: #cc88ff; animation-delay: 0.3s; }
+  .danger-card:nth-child(4) { border-color: #44aaff; color: #88ccff; animation-delay: 0.4s; }
+
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .danger-card .icon { font-size: 30px; margin-bottom: 8px; }
+  .danger-card .title { font-family: 'Bangers', cursive; font-size: 20px; letter-spacing: 1px; margin-bottom: 6px; }
+  .danger-card .desc { font-size: 13px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+
+  /* IMPACT BARS */
+  .impact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .impact-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    min-width: 120px;
+    text-align: right;
+    letter-spacing: 0.5px;
+  }
+
+  .impact-bar-bg {
+    flex: 1;
+    height: 14px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+  .impact-bar-fill {
+    height: 100%;
+    border-radius: 7px;
+    animation: fillBar 1.8s ease both;
+  }
+
+  @keyframes fillBar {
+    from { width: 0; }
+  }
+
+  .impact-pct {
+    font-family: 'Bangers', cursive;
+    font-size: 17px;
+    min-width: 44px;
+    color: #ffd700;
+  }
+
+  /* DOG SECTION */
+  .dog-section {
+    background: rgba(20,20,40,0.75);
+    backdrop-filter: blur(6px);
+    border: 2px solid #ffd700;
+    border-radius: 18px;
+    padding: 22px;
+    margin: 8px 0 20px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255,215,0,0.2);
+  }
+
+  .dog-text h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    color: #ffd700;
+    margin-bottom: 8px;
+  }
+
+  .dog-text p { font-size: 13.5px; color: rgba(255,255,255,0.82); line-height: 1.6; }
+
+  /* PREVENTION GRID */
+  .prevention-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .prev-card {
+    background: rgba(20,20,40,0.7);
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(255,215,0,0.3);
+    border-radius: 14px;
+    padding: 16px 12px;
+    text-align: center;
+    animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .prev-card:hover {
+    transform: translateY(-4px);
+    border-color: #ffd700;
+  }
+
+  .prev-card:nth-child(1) { animation-delay: 0.1s; }
+  .prev-card:nth-child(2) { animation-delay: 0.2s; }
+  .prev-card:nth-child(3) { animation-delay: 0.3s; }
+  .prev-card:nth-child(4) { animation-delay: 0.4s; }
+  .prev-card:nth-child(5) { animation-delay: 0.5s; }
+  .prev-card:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .prev-card .icon { font-size: 30px; margin-bottom: 8px; }
+  .prev-card .label { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.88); line-height: 1.4; }
+
+  /* CLOSING */
+  .closing-panel {
+    background: linear-gradient(135deg, #ff6600 0%, #ffd700 100%);
+    border-radius: 18px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-top: 28px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(255,165,0,0.4);
+  }
+
+  .closing-panel::before {
+    content: 'DIGA NÃO ÀS DROGAS';
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    font-size: 72px;
+    color: rgba(0,0,0,0.06);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    white-space: nowrap;
+    letter-spacing: 4px;
+    pointer-events: none;
+  }
+
+  .closing-panel h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 34px;
+    color: #1a1a2e;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .closing-panel p { color: #4a2000; font-size: 15px; font-weight: 700; line-height: 1.65; }
+
+  .punch-word {
+    display: inline-block;
+    animation: punchPulse 2s ease-in-out infinite;
+    color: #1a1a2e;
+    font-family: 'Bangers', cursive;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  @keyframes punchPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 580px) {
+    .header-title { font-size: 28px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .prevention-grid { grid-template-columns: repeat(2, 1fr); }
+    .dog-section { flex-direction: column; text-align: center; }
+    .impact-label { min-width: 90px; font-size: 10px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="bg-overlay"></div>
+<div class="speed-lines"></div>
+<div class="halftone"></div>
+
+<div class="content">
+
+  <!-- HEADER -->
+  <div class="header-banner">
+    <div class="school-label">🏫 Escola Estadual Emília Cabral Mota</div>
+    <div class="header-title">PALESTRA CONTRA AS DROGAS</div>
+    <div class="header-date">📅 22 de junho de 2026</div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>DIGA NÃO ÀS DROGAS</span>
+      <span>ESCOLHAS SAUDÁVEIS SALVAM VIDAS</span>
+      <span>PREVENÇÃO É O MELHOR CAMINHO</span>
+      <span>JUNTOS CONTRA AS DROGAS</span>
+      <span>ESCOLA EMÍLIA CABRAL MOTA</span>
+      <span>DIGA NÃO ÀS DROGAS</span>
+      <span>ESCOLHAS SAUDÁVEIS SALVAM VIDAS</span>
+      <span>PREVENÇÃO É O MELHOR CAMINHO</span>
+      <span>JUNTOS CONTRA AS DROGAS</span>
+      <span>ESCOLA EMÍLIA CABRAL MOTA</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div style="padding: 0 4px;">
+    <div style="font-size:11px; color:rgba(255,215,0,0.7); letter-spacing:1px; margin-bottom:6px; padding-left:36px;">O QUE ACONTECEU:</div>
+    <div class="speech-bubble">
+      <p>No dia <strong>22 de junho de 2026</strong>, a <strong>Escola Estadual Emília Cabral Mota</strong> realizou uma palestra especial sobre os <strong>perigos das drogas</strong>. Alunos aprenderam sobre riscos à saúde, impacto nos estudos e na vida pessoal — além de dicas valiosas de prevenção e escolhas saudáveis!</p>
+    </div>
+  </div>
+
+  <!-- DANGERS -->
+  <div class="manga-divider"><span>⚡ OS PERIGOS ⚡</span></div>
+
+  <div class="section-heading" style="color:#ff8888;">
+    <div class="icon-circle" style="border-color:#ff4444; background:rgba(255,68,68,0.15);">💀</div>
+    Riscos do Uso de Drogas
+  </div>
+
+  <div class="cards-grid">
+    <div class="danger-card">
+      <div class="icon">🧠</div>
+      <div class="title">Saúde Mental</div>
+      <div class="desc">Destruição de neurônios, depressão, ansiedade e perda da capacidade de raciocinar com clareza.</div>
+    </div>
+    <div class="danger-card">
+      <div class="icon">📚</div>
+      <div class="title">Estudos em Risco</div>
+      <div class="desc">Queda no rendimento escolar, dificuldade de concentração e abandono dos estudos.</div>
+    </div>
+    <div class="danger-card">
+      <div class="icon">👨‍👩‍👧</div>
+      <div class="title">Vida Pessoal</div>
+      <div class="desc">Afastamento da família, perda de amigos e comprometimento do futuro profissional.</div>
+    </div>
+    <div class="danger-card">
+      <div class="icon">⚖️</div>
+      <div class="title">Problemas Legais</div>
+      <div class="desc">Porte de drogas é crime. Jovens podem responder judicialmente pelos seus atos.</div>
+    </div>
+  </div>
+
+  <!-- IMPACT -->
+  <div class="manga-divider"><span>📊 IMPACTO DAS DROGAS</span></div>
+
+  <div class="impact-row">
+    <div class="impact-label">Risco à saúde</div>
+    <div class="impact-bar-bg"><div class="impact-bar-fill" style="width:92%; background:linear-gradient(90deg,#ff4444,#ff8800);"></div></div>
+    <div class="impact-pct">92%</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label">Queda escolar</div>
+    <div class="impact-bar-bg"><div class="impact-bar-fill" style="width:78%; background:linear-gradient(90deg,#ff9900,#ffdd00);"></div></div>
+    <div class="impact-pct">78%</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label">Impacto familiar</div>
+    <div class="impact-bar-bg"><div class="impact-bar-fill" style="width:85%; background:linear-gradient(90deg,#aa44ff,#ff88cc);"></div></div>
+    <div class="impact-pct">85%</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label">Risco legal</div>
+    <div class="impact-bar-bg"><div class="impact-bar-fill" style="width:70%; background:linear-gradient(90deg,#44aaff,#44ffcc);"></div></div>
+    <div class="impact-pct">70%</div>
+  </div>
+
+  <!-- DOG -->
+  <div class="manga-divider"><span>🐕 DESTAQUE DO EVENTO</span></div>
+
+  <div class="dog-section">
+    <svg width="90" height="90" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <ellipse cx="40" cy="52" rx="28" ry="20" fill="#c8a060"/>
+      <circle cx="40" cy="28" r="18" fill="#c8a060"/>
+      <ellipse cx="24" cy="20" rx="8" ry="14" fill="#a07840" transform="rotate(-15,24,20)"/>
+      <ellipse cx="56" cy="20" rx="8" ry="14" fill="#a07840" transform="rotate(15,56,20)"/>
+      <circle cx="33" cy="25" r="4" fill="#1a1a2e"/>
+      <circle cx="47" cy="25" r="4" fill="#1a1a2e"/>
+      <circle cx="34" cy="24" r="1.5" fill="#fff"/>
+      <circle cx="48" cy="24" r="1.5" fill="#fff"/>
+      <ellipse cx="40" cy="33" rx="5" ry="3.5" fill="#1a1a2e"/>
+      <path d="M37 36 Q40 44 43 36" fill="#ff6699" stroke="#cc4466" stroke-width="0.5"/>
+      <rect x="18" y="44" width="44" height="22" rx="4" fill="#1a5276" opacity="0.9"/>
+      <text x="40" y="58" font-size="8" fill="#ffd700" font-weight="bold" text-anchor="middle" font-family="Nunito,sans-serif">K9</text>
+      <path d="M68 50 Q80 42 76 36" stroke="#c8a060" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <ellipse cx="25" cy="70" rx="7" ry="5" fill="#a07840"/>
+      <ellipse cx="55" cy="70" rx="7" ry="5" fill="#a07840"/>
+      <polygon points="40,3 42,9 48,9 43,13 45,19 40,15 35,19 37,13 32,9 38,9" fill="#ffd700"/>
+    </svg>
+    <div class="dog-text">
+      <h3>🐾 Cachorro Farejador em Ação!</h3>
+      <p>Ao final da palestra, houve uma apresentação especial com um <strong>cão farejador das forças de segurança</strong>. O animal demonstrou ao vivo como detecta substâncias ilícitas, impressionando todos os alunos e mostrando como a tecnologia canina auxilia no combate às drogas.</p>
+    </div>
+  </div>
+
+  <!-- PREVENTION -->
+  <div class="manga-divider"><span>🛡️ PREVENÇÃO</span></div>
+
+  <div class="section-heading" style="color:#44ff88;">
+    <div class="icon-circle" style="border-color:#44ff88; background:rgba(68,255,136,0.15);">✅</div>
+    Escolhas Saudáveis
+  </div>
+
+  <div class="prevention-grid">
+    <div class="prev-card">
+      <div class="icon">⚽</div>
+      <div class="label">Pratique esportes</div>
+    </div>
+    <div class="prev-card">
+      <div class="icon">📖</div>
+      <div class="label">Foque nos estudos</div>
+    </div>
+    <div class="prev-card">
+      <div class="icon">🎨</div>
+      <div class="label">Desenvolva hobbies</div>
+    </div>
+    <div class="prev-card">
+      <div class="icon">👨‍👩‍👧</div>
+      <div class="label">Valorize a família</div>
+    </div>
+    <div class="prev-card">
+      <div class="icon">🗣️</div>
+      <div class="label">Peça ajuda quando precisar</div>
+    </div>
+    <div class="prev-card">
+      <div class="icon">🚫</div>
+      <div class="label">Saiba dizer não</div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing-panel">
+    <h2>💪 A DECISÃO É SUA!</h2>
+    <p>
+      A palestra foi um sucesso! Alunos da Escola Estadual Emília Cabral Mota saíram conscientes dos riscos e fortalecidos para tomar
+      <span class="punch-word">DECISÕES RESPONSÁVEIS</span>
+      e construir um futuro livre das drogas.
+    </p>
+    <br>
+    <div style="font-family:'Bangers',cursive; font-size:22px; color:#1a1a2e; letter-spacing:2px; margin-top:6px;">
+      🌟 JUNTOS SOMOS MAIS FORTES! 🌟
+    </div>
+  </div>
+
+  <div class="footer">
+    Escola Estadual Emília Cabral Mota &bull; 22 de junho de 2026 &bull; Palestra de Prevenção às Drogas
+  </div>
+
+</div>
+</body>
+</html>
